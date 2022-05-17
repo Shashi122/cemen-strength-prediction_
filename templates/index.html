@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>cement</h3>
+            <input id="first" name="cement" type="number ">
+            <h3>What is the blast_furnace capacity?(In units)</h3><br><input id="second" name="blast_furnace" required="required">
+            <h3>How much fly_ash produced ?</h3><br><input id="fourth" name="fly_ash" required="required">
+            <h3>How much water is required?</h3><br><input id="fifth" name="water" required="required">
+                <!-- <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Diesel">CNG</option>
+            </select> -->
+            <h3>How much super_plasticizer is required</h3><br><input id="sixth" name="super_plasticizer" required="required">
+                <!-- <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select> -->
+            <h3>coarse_aggregate</h3><br><input name="coarse_aggregate" id="seventh" required="required">
+                <!-- <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select> -->
+            <h3>fine_aggregate</h3><br><input name="fine_aggregate" id="eigth" required="required">
+            <h3>age</h3><br><input name="age" id="ninth" required="required">
+            <br><br><button id="sub" type="submit ">Calculate the Cement strength</button>
+            <br>
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #fifth {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #sixth {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #sixth:hover {
+            background-color: coral;
+        }
+        
+        #seventh {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #seventh:hover {
+            background-color: coral;
+        }
+        
+        #eigth {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #eigth:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
